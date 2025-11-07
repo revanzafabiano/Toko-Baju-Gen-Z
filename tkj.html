@@ -115,17 +115,17 @@
       <h2>Koleksi Produk</h2>
       <div class="menu-grid">
         <div class="menu-item">
-          <img src="c:\Users\WINDOWS 11\Pictures\polos.jpeg" alt="Kaos Polos">
+          <img src="polos.jpeg" alt="Kaos Polos">
           <h3>Kaos Polos</h3>
           <p>Rp 75.000 - Nyaman dan cocok untuk sehari-hari.</p>
         </div>
         <div class="menu-item">
-          <img src="c:\Users\WINDOWS 11\Pictures\flanel.jpeg" alt="Kemeja Flanel">
+          <img src="flanel.jpeg" alt="Kemeja Flanel">
           <h3>Kemeja Flanel</h3>
           <p>Rp 120.000 - Stylish dengan bahan lembut.</p>
         </div>
         <div class="menu-item">
-          <img src="c:\Users\WINDOWS 11\Pictures\denim.jpeg" alt="Jaket Denim">
+          <img src="denim.jpeg" alt="Jaket Denim">
           <h3>Jaket Denim</h3>
           <p>Rp 250.000 - Tahan lama dengan gaya kasual.</p>
         </div>
@@ -133,20 +133,30 @@
     </section>
 
     <section id="order">
-      <h2>Order Sekarang</h2>
-      <form onsubmit="alert('Terima kasih, pesanan Anda sudah diterima!'); return false;">
-        <input type="text" name="nama" placeholder="Nama Anda" required>
-        <input type="text" name="telepon" placeholder="Nomor Telepon" required>
-        <select name="produk" required>
-          <option value="">Pilih Produk</option>
-          <option value="kaos_polos">Kaos Polos</option>
-          <option value="kemeja_flanel">Kemeja Flanel</option>
-          <option value="jaket_denim">Jaket Denim</option>
-        </select>
-        <textarea name="alamat" rows="3" placeholder="Alamat Pengiriman" required></textarea>
-        <button type="submit">Kirim Pesanan</button>
-      </form>
-    </section>
+        <h2>Order Sekarang</h2>
+        <form action="order.php" method="POST">
+          <input type="text" name="nama" placeholder="Nama Anda" required />
+          <input
+            type="text"
+            name="telepon"
+            placeholder="Nomor Telepon"
+            required
+          />
+          <select name="menu" required>
+            <option value="">Pilih Produk</option>
+            <option value="Kaos Polos">Kaos Polos</option>
+            <option value="Kemeja Flanel">Kemeja Flanel</option>
+            <option value="Jaket Denim">Jaket Denim</option>
+          </select>
+          <textarea
+            name="alamat"
+            rows="3"
+            placeholder="Alamat Pengiriman"
+            required
+          ></textarea>
+          <button type="submit">Kirim Pesanan</button>
+        </form>
+      </section>
 
     <section id="kontak">
       <h2>Kontak Kami</h2>
@@ -161,3 +171,4 @@
   </footer>
 </body>
 </html>
+
